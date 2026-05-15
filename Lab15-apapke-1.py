@@ -7,7 +7,6 @@ Plotting a shape
 
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
-import numpy as np
 import math
 
 x = np.linspace(-10, 10, 420)
@@ -20,6 +19,6 @@ ax.set_xlim(0, 69)
 ax.set_ylim(0, 69)
 ax.set_aspect('equal')
 ax.set_title("traingle")
-plt.xlabel("its the traigle")
+plt.xlabel("its the triangel")
 plt.ylabel("watch out")
-plt.show()
+plt.savefig("traingel.png")
