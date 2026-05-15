@@ -6,13 +6,20 @@ Plotting a shape
 """
 
 import matplotlib.pyplot as plt
+from matplotlib.patches import Polygon
 import numpy as np
 import math
 
 x = np.linspace(-10, 10, 420)
-y = (4 * (x ** 2)) + (1 / (x ** 2)) - (4 * (x ** 2))
+y = (4 * (x ** 2))
 
 fig, ax = plt.subplots()
-ax.plot(x, y)
-plt.ylabel('some numbers')
+polygon = Polygon([(10, 10), (60, 20), (50, 60)], edgecolor='orange', facecolor='yellow', linewidth=6)
+ax.add_patch(polygon)
+ax.set_xlim(0, 69)
+ax.set_ylim(0, 69)
+ax.set_aspect('equal')
+ax.set_title("traingle")
+plt.xlabel("its the traigle")
+plt.ylabel("watch out")
 plt.show()
